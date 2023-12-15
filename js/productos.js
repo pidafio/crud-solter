@@ -39,6 +39,10 @@ createApp({
                      alert("eliminado")
                      location.reload()
                  })
+                 .catch(err=>{
+                console.log(err)
+                
+            })
          }
     },
     mounted(){

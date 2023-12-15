@@ -1,0 +1,42 @@
+.container_tabla-productos{
+    border:  solid 1px rgb(113, 111, 111);
+    width: 70%;
+    margin:auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(112, 1, 1, 0.56);
+}
+.trHead_tabla-productos{
+   
+    background: purple;
+    color:aliceblue;
+    
+   
+    
+}
+.td_tabla-productos{
+   padding: 2vw;
+   font-size: 1.6vw;
+}
+
+.limite-linea {
+   display: -webkit-box;
+   width: 7em;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+
+.body_tabla-productos .trHead_tabla-productos{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;    
+}
+
+.trBody_tabla-productos{
+    text-align: center;
+    background-color: rgb(247, 243, 247);
+ }
+
+    

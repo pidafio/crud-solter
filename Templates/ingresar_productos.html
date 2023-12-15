@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="../css/estilo_dom.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a8c2996f32.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>crud-productos</title>
+    <title>Document</title>
+</head>
+<body>
+    <header >
+        <div class="container_header">
+            <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>
+            <nav  class="container__bt">
+                <ul id="menu__item"class="item__menu">
+                    <li class="opciones__menu"><a href="../Templates/productos.html" class="texto__desplegado">productos</a></li>
+                    <li class="opciones__menu"><a href="../Templates/ingresar_productos.html" class="texto__desplegado">ingresar productos</a></li>
+                    <li class="opciones__menu"><a href="../index.html" class="texto__desplegado">principal</a></li>
+                    
+                </ul>     
+            </nav> 
+        </div>    
+        <div class="Separador__menu"></div>   
+    </header>
+    <main class="main_container">
+        
+        <div class="container_from">
+                <div class="title_form">
+                    <h1 class="title_h1">ingresar productos</h1>
+                </div>   
+                <form class="body__form" action="">   
+                    <div class="entrada" >
+                        <label class="label" for="categoria">Categoria:</label>
+
+                        <select class="input__form"  name="categoria" id="categoria">
+                            <option value="aires acondicionados">aires acondicionados</option>
+                            <option value="repuestos" >repuestos</option>
+                            <option value="equipos centrales">equipos centrales</option>
+                          </select>
+                    </div>
+                    <div class="entrada">
+                        <label class="label" for="imagen">Imagen:</label>
+                        <input class="input__form" type="text" name="imagen" id="imagen">
+                    </div>
+
+                    <div class="entrada">
+                        <label class="label" for="marca">Marca:</label>
+                        <input class="input__form" type="text" name="marca" id="marca">
+                    </div>
+
+                    <div class="entrada">
+                        <label class="label" for="modelo">Modelo:</label>
+                        <input class="input__form" type="text" name="modelo" id="modelo">
+                    </div>
+                    <div class="entrada">
+                        <label class="label" for="descripcion">descripcion:</label>
+                        <textarea class="input__form textarea_ingresar"  name="descripcion" id="descripcion" rows="3" cols="20"></textarea>
+                    </div>
+
+                    <div class="entrada">
+                        <label class="label" for="precio">Precio:</label>
+                        <input class="input__form" type="number" name="precio" id="precio">
+                    </div>
+
+                    <div class="entrada_btn">
+                        <button class="modificar" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form> 
+        </div>          
+    </main>
+    <footer>
+        <div class="container__footer">
+            <h3 class="text__footer">Codo a Codo </h3>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f7f7f7;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-regular fa-envelope" style="color: #f7f7f7;"></i></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/funcion-ingresar-editar-productos.js"></script>
+</body>
+</html>

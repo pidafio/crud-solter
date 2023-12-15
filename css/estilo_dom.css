@@ -1,0 +1,84 @@
+
+
+.main_container{
+    margin: 12vh auto 22vh auto;
+}
+
+
+.container__option-categoria{
+    width: 17vw;
+}
+
+
+.container_from{
+    width: 40vw;
+    height: 65vh;
+    border: solid 2px black;
+    border-radius: 15px;
+    margin: auto;
+    background: rgb(247, 243, 247);
+}
+
+
+.body__form{
+    margin-top: 2vh;
+}
+
+
+.input__form{
+    width: 21vw;
+}
+
+
+.title_form{
+    display: flex;
+    border-radius: 14px 14px 0 0;
+    background: purple;
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title_h1{
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+
+.renglon_pronducto-envio{
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+}
+
+
+.entrada{
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    justify-content: space-between;
+    padding: 1vh;
+}
+
+
+.label{
+    display: flex;
+    width: 7vw;
+    font-size: 3.2vh;
+    justify-content: space-between;
+}
+
+
+.entrada_btn{
+    display: flex;
+    margin-top: 1vh;
+    justify-content: center;   
+}
+
+
+.textarea_ingresar{
+    resize: none;
+}
+
+

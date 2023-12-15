@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="../css/estilo_dom.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a8c2996f32.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>crud-productos</title>
+    <title>Document</title>
+</head>
+<body>
+    <header >
+        <div class="container_header">
+            <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>
+            <nav  class="container__bt">
+                <ul id="menu__item"class="item__menu">
+                    <li class="opciones__menu"><a href="../Templates/productos.html" class="texto__desplegado">productos</a></li>
+                    <li class="opciones__menu"><a href="../Templates/ingresar_productos.html" class="texto__desplegado">ingresar productos</a></li>
+                    <li class="opciones__menu"><a href="../index.html" class="texto__desplegado">principal</a></li>
+                    
+                    
+                </ul>     
+            </nav> 
+        </div>    
+        <div class="Separador__menu"></div>   
+    </header>
+    <main class="main_container">
+        <section class="container__tabla">
+            <div id="app">
+                
+                <section v-if="error">lo sentimos se produjo un error</section>
+                <section v-else>
+                        <section v-if="cargando"><p>cargando...</p></section>
+                        <section v-else>
+                                <div>
+                                <table class="container_tabla-productos">
+                                    <thead class="head_tabla-productos">
+                                        <tr class="trHead_tabla-productos">
+                                            <th class="td_tabla-productos">Id</th>
+                                            <th class="td_tabla-productos">Categoria</th>
+                                            <th class="td_tabla-productos">Marca</th>
+                                            <th class="td_tabla-productos">Modelo</th>
+                                            <th class="td_tabla-productos">Descripcion</th>
+                                            <th class="td_tabla-productos">Precio</th>
+                                            <th class="td_tabla-productos">Imagen</th>
+                                            <th class="td_tabla-productos">Acciones</th>
+                                            <th class="td_tabla-productos">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="body_tabla-productos">
+                                        <tr class="trBody_tabla-productos"v-for="objeto in productos" >
+                                                
+                                                    <td class="tdBody_tabla-productos" >{{objeto.id}}</td>
+                                                    <td class="tdBody_tabla-productos">{{objeto.categoria}}</td>
+                                                    <td class="tdBody_tabla-productos">{{objeto.marca}}</td>
+                                                    <td class="tdBody_tabla-productos limite2">{{objeto.modelo}}</td>
+                                                    <td class="tdBody_tabla-productos limite-linea">{{objeto.descripcion}}</td>
+                                                    <td class="tdBody_tabla-productos">{{objeto.precio}}</td>
+                                                    <td class="tdBody_tabla-productos">
+                                                        <img class="img_tabla-productos":src="objeto.imagen" width="30px" height="30px">
+                                                    </td>
+                                                    <td class="tdBody_tabla-productos botones-td">
+                                                    
+                                                        <a class="editar_tabla-productos" :href="'/Templates/editar_productos.html?id='+ objeto.id+'&categoria='+ objeto.categoria+ '&marca='+ objeto.marca +'&modelo='+objeto.modelo+'&descripcion='+ objeto.descripcion +'&precio='+ objeto.precio +'&imageng='+ objeto.img" >editar</a>
+                                                    </td>
+                                                    <td>    
+                                                        <button class="eliminar_tabla-productos" v-on:click="eliminar(objeto.id)">Eliminar</button>
+                                                    </td>
+                                        </tr>
+                                        
+                                    </tbody> 
+                                </table>
+                                </div>
+                        </section>
+                </section>        
+            </div>
+        </section>    
+    </main>
+    <footer>
+        <div class="container__footer">
+            <div class="text__footer">
+                <h3 >Pidafio@ </h3>
+                <h3>2023</h3>
+            </div>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-github" style="color: #f7f7f7;"></i></div>
+                <div class="ico__footer"><i class="fa-regular fa-envelope" style="color: #f7f7f7;"></i></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/productos.js" "></script>
+    
+
+</body>
+</html>

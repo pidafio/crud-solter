@@ -3,7 +3,7 @@ const{createApp}=Vue
 createApp({
     data(){
         return{
-            url:"http://solter.pythonanywhere.com/productos",
+            url:"https://solter.pythonanywhere.com/productos",
             productos:[],
             error: false,
             cargar: true,

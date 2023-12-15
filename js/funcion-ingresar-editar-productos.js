@@ -48,14 +48,14 @@ console.log(ingresar_img)
    function guardar(){
 
         let metodo='POST'
-        let url1="http://solter.pythonanywhere.com/registro"
+        let url1="https://solter.pythonanywhere.com/registro"
         let id1=""
         registrar(url1, metodo,id1)
    }
 
     function editar(){
         var metodo='PUT'
-        var url1="http://solter.pythonanywhere.com/upgrade/"+id
+        var url1="https://solter.pythonanywhere.com/upgrade/"+id
         let id1=document.getElementById("id").value
         registrar(url1, metodo,id1)
 

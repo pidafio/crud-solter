@@ -28,7 +28,7 @@ createApp({
             });
         },
         eliminar(id){
-            let url="http://solter.pythonanywhere.com/delete/"+id
+            let url="https://solter.pythonanywhere.com/delete/"+id
             let options={
                     method: 'DELETE',        
                      }
